@@ -1,1701 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZEE5 - Watch TV Shows, 100+ Originals, Movies, News & Live TV Online</title>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-
-    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/5/5a/Zee5-official-logo.jpeg"
-        type="image/JPEG">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="footer_.css">
-    <script src="https://kit.fontawesome.com/831211f573.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="footer.css">
-    <style>
-
-        .custom-slider {
-            width: 96%;
-            margin: auto;
-            /* background-color: aquamarine; */
-            /* padding-top: 50px; */
-            gap: 15px;
-        }
-
-        /* .slick-prev::before, .slick-next::before{
-             color:blue 
-        } */
-
-        .custom-slider .Section_cards {
-            height: 310px;
-            padding-top: 25px;
-            /* padding: 5px 5px 5px 5px; */
-            /* border: 2px solid blue; */
-            margin-top: -5px;
-            gap: 15px;
-            margin: auto;
-            margin-left: 10px;
-
-        }
-        .custom-slider .Section_cards_tv_episodes{
-            height: 190px;
-            padding-top: 25px;
-            /* padding: 5px 5px 5px 5px; */
-            /* border: 2px solid blue; */
-            margin-top: -5px;
-            gap: 15px;
-            margin-bottom: -150px;
-            margin: auto;
-            margin-left: 10px;
-
-        }
-        .custom-slider .Section_cards_tv_episodes .Section_cards_thumbnail{
-            margin: auto;
-            width: 100%;
-            height: 94%;
-            border-radius: 7px;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        /* border: 2px solid blue; */
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zomato Clone</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-            .custom-slider .Section_cards_tv_episodes:hover {
-            height: 390px;
-            transform: scale(1.2);
-            width: 150%;
-            height: 150%;
-            z-index: 2;
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
     }
-        .custom-slider .Section_cards .Section_cards_thumbnail {
 
+    /* Header Section */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f44336;
+      padding: 10px 20px;
+      color: #fff;
+    }
 
-            margin: auto;
-            width: 100%;
-            height: 94%;
-            border-radius: 7px;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            /* border: 2px solid blue; */
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
 
-        }
+    .navbar ul {
+      list-style: none;
+      display: flex;
+    }
 
-        .custom-slider .Section_cards:hover {
-            height: 390px;
-            transform: scale(1.2);
-            width: 150%;
-            height: 150%;
-            z-index: 2;
-        }
+    .navbar ul li {
+      margin: 0 10px;
+    }
 
-        .section_more {
+    .navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+    }
 
-            color: rgb(162, 129, 249);
-            font-size: 20px;
-        }
+    .navbar ul li a:hover {
+      text-decoration: underline;
+    }
 
-        /* .section_more span {
-            color: rgb(162, 129, 249);
-            font-size: 20px;
-            transform: rotate(225deg);
-        } */
+    /* Hero Section */
+    .hero {
+      background-image: url('https://source.unsplash.com/1600x900/?food');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
 
-        /* .custom-slider .slick-center {
-            color: #fff;
-            opacity:1;
-            transform: scale(1.15);
-    
-        }
-     */
-         body {
-    background-color: black;
-    /* color: whitesmoke; */
-}
-*{
-    font-family: sans-serif;
-    /* background-color: black; */
-    
-}
-/* #navigation_bar_top{
-    width: 98%;
-    height: 60px;
-    margin: auto;
-    background-color: rgb(15,6,23);
-    font-size: 50px;
-    color: whitesmoke;
-    
-} */
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
 
-#ads_section{
-    text-align: center;
-    background-color: rgb(64,26,76) ;
-}
-#image_slider {
-    width: 84%;
-    height: 410px;
-    /* background-color: rgb(15,6,23); */
-    /* background-color:blanchedalmond; */
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    color: whitesmoke;
-    font-family: sans-serif;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-}
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
 
-#Latest_Hindi_Episodes_Free>.box_for_section_title{
-    margin-bottom: -60px;
-}
+    .hero button {
+      background-color: #f44336;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
 
-.left_arrow {
-    /* background-color: aquamarine; */
-    font-size: 40px;
-    font-weight: 700;
-    color: whitesmoke;
-    transform: rotate(45deg);
-}
+    .hero button:hover {
+      background-color: #d32f2f;
+    }
 
-.right_arrow {
-    /* background-color: aqua; */
-    font-size: 40px;
-    font-weight: 900;
-    color: whitesmoke;
-    transform: rotate(225deg);
-}
+    /* Restaurant Listings */
+    .restaurant-section {
+      padding: 20px;
+    }
 
-.append_image {
-    /* border: 2px solid red; */
-    width: 95%;
-    height: 400px;
-    box-shadow:
-      0 1px 1px hsl(0deg 0% 0% / 0.075),
-      0 2px 2px hsl(0deg 0% 0% / 0.075),
-      0 4px 4px hsl(0deg 0% 0% / 0.075),
-      0 8px 8px hsl(0deg 0% 0% / 0.075),
-      0 16px 16px hsl(0deg 0% 0% / 0.075)
-    ;
-}
-#sliderPhoto{
-    height: 100%;
-    width: 100%;
-}
-#sliderName{
-    position: absolute;
-    margin-top: -120px;
-    margin-left: 12px;
-    
-}
-#watch_buy_button{
-    position: absolute;
-    margin-top: -70px;
-    margin-left: 12px;
+    .restaurant-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-}
-#buy_button{
-    margin-left: 15px;
-    background-color: rgb(130,48,198);
-    color: whitesmoke;
-    padding: 8px 15px 8px 15px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    font-weight: 600;
-    
+    .restaurant-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
 
-}
-#buy_button:hover{
-    background-color:rgb(52, 4, 92) ;
-}
-#watch_button{
-    background-color: black;
-    color: whitesmoke;
-    padding: 7px 15px 7px 15px;
-   outline: 0.5px solid whitesmoke;
-    border-radius: 5px;
-    font-weight: 600;
-}
-#watch_button:hover{
-    background-color:whitesmoke ;
-    color: black;
-    outline: whitesmoke;
-    
-}
-#crown_icon{
-    position: absolute;
-    margin-left: 33px;
-    margin-top: 30px;
-}
-span{
-    font-size: 40px;
-    font-weight: 900;
-    color: whitesmoke;
-    transform: rotate(225deg);
-}
+    .restaurant-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
+    .restaurant-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
 
-.box_for_section_title{
-    display: flex;
-    justify-content: space-between;
-    width: 92%;
-    margin: auto;
-    /* background-color: brown; */
-}
-.section_title{
-    color: whitesmoke;
-    font-family: sans-serif;
-    /* border: 2px solid blue; */
-}
-.section_more{
-    color: whitesmoke;
-}
+    .restaurant-card .details {
+      padding: 15px;
+    }
 
-.section_content{
-    width: 92%;
-    height: 310px;
-    /* background-color: burlywood; */
-    margin: auto;
-   display: flex;
-    gap:10px;
-    /* overflow: scroll; */
+    .restaurant-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
 
-} 
-/* card hai yeh/ per card */
-.section_card{
-    height: 98%;
-    width:19%;
-    color: rgb(46, 45, 45);
-    position: relative;
-    border-radius: 7px;
-    /* background-color: burlywood; */
-}
+    .restaurant-card p {
+      color: #555;
+      margin-bottom: 10px;
+    }
 
-.section_card_tv_episodes{
-    height: 98%;
-    width:19%;
-    color: rgb(46, 45, 45);
-    position: relative;
-    border-radius: 7px;
-    /* background-color: burlywood; */
-}
-/*
-/* .section_card_title{
-   
-    position: absolute;
-    margin-top: -120px;
-    margin-left: 12px;
-    
-} */
-.section_card_crown{
-    position: absolute;
-    margin-left: 7px;
-    margin-top: 7px;
-}
+    .restaurant-card .rating {
+      display: inline-block;
+      background-color: #4caf50;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+    }
 
-.section_card_image .Section_cards_thumbnail{
-    border-radius: 7px;
-    width: 100%;
-    height: 100%; 
-    
-}
+    /* Footer */
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
 
-.custom-slider .Web_Series_card{
-    position: relative;
-}
-.custom-slider .Web_Series_card>{
-    color:rgb(39, 38, 38);
-    
-}
-.Web_Series_h2{
-    /* border: 5px solid blue;  */
-    position: absolute;
-    margin-top: -30px;
-    margin-left: 0px;
-    background-color: rgb(45, 45, 45);
-    color: rgb(46, 44, 44);
-    font-size: smaller;
-}
+    .footer p {
+      margin: 5px 0;
+    }
 
-/* .Web_Series_watch_button{
-    position: absolute;
-    margin-top: -40px;
-    margin-left: 5px;
-    background-color: rgb(164, 159, 159);
-    font-size: smaller;
-} */
-/* .custom-slider .Section_cards .Section_cards_bottom{
-    position: absolute;
-    margin-top: -120px;
-    margin-left: 12px;
-    /* background-color: aquamarine; */
-    /* z-index: 1;
+    .footer a {
+      color: #f44336;
+      text-decoration: none;
+    }
 
-    color: rgb(95, 93, 93); */
-    /* width: 98%;
-    margin: auto;
-    height: 30%;
-     
-} */
-
-/* Manual data slider styles****************** */
-
-.Section_cards{
-    position: relative;
-}
-.Section_cards_crown{
-    position: absolute;
-    margin-left: 7px;
-    margin-top: 7px;
-}
-.secton_cards_title{
-    margin-top: 4px;
-    padding-left: 15px;
-    margin-bottom: -1px;
-    font-size: 12px;
-    color: rgb(63, 60, 60);
-}
-.Section_cards_bottom{
-    display: none;
-    position: absolute;
-    background-color: whitesmoke;
-    color: rgb(68, 68, 68);
-    font-weight: 100;
-    width: 100%;
-    /* border:2px solid blue; */
-    margin-top: -50px;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
-}
-
-/* one with the episodes starts here********************************/
-
-.section_card_tv_episodes{
-    height: 98%;
-    width:19%;
-    color: rgb(46, 45, 45);
-    position: relative;
-    border-radius: 7px;
-    /* background-color: burlywood; */
-}
-.Section_cards_bottom_tv_episodes{
-   display: none;
-    position: absolute;
-    background-color: whitesmoke;
-    color: rgb(68, 68, 68);
-    font-size: 10px;
-    font-weight: 100;
-    width: 100%;
-    /* border:2px solid blue; */
-    margin-top: -0px;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
-}
-.Section_cards_tv_episodes:hover>.Section_cards_bottom_tv_episodes{
-    display:grid;
-}
-/*one with the episodes ends here****************************************  */
-
-.section_cards_buttons_div{
-    padding: 5px 5px 5px 5px;
-    display: flex;
-    justify-content: space-between;
-    padding-right: 7px;
-    padding-left: 7px;
-    padding-bottom: 7px;
-}
-.section_cards_button_watch{
-    color: rgb(48, 48, 48);
-background-color: whitesmoke;
-border-radius: 5px;
-border: 0.5px solid black;
-outline: none;
-padding-left: 3px;
-margin-left: 6px;
-width: 75px;
-font-size: 10px;
-}
-.section_cards_button_watch:hover{
-    color: whitesmoke;
-    background-color:rgb(162, 129, 249);
-    border:none;
-    font-weight: 500;
-    
-}
-
-.section_cards_button_share{
-    border: none;
-    outline: none;
-    font-size: 11px;
-    color: rgb(59, 58, 58);
-}
-.section_cards_button_share:hover{
-    color:rgb(162, 129, 249) ;
-    font-weight: 700;
-    
-}
-
-.Section_cards:hover>.Section_cards_bottom{
-    display:grid;
-}
-
-
-/* Manual data slider styles ends here ************************* */
-
-/* yaha se */
-.webseries_watch_share{
-    display: none;
-    justify-content: space-between;
-    position: absolute;
-    background-color: whitesmoke;
-    gap: 15px;
-   
-    margin-top: -40px;
-    padding: 12px 12px 12px 12px ;
-   
-    
-}
-.Web_Series_card:hover>.webseries_watch_share{
-    display: flex;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
-    
-}
-.Web_Series_card:hover{
-    height: 320px;
-    transform: scale(1.1);
-    width: 120%;
-    height: 120%;
-    z-index: 2;
-  
-}
-
-
-.web_series_crown{
-    position: absolute;
-    margin-left: 7px;
-    margin-top: 7px;
-}
-.web_series_image{
-    border-radius: 7px;
-    border-bottom-left-radius: 7px;
-    border-top-right-radius: 7px;
-}
-
-.Web_Series_watch_button{
-color: rgb(48, 48, 48);
-background-color: whitesmoke;
-border-radius: 5px;
-border: 0.5px solid black;
-outline: none;
-padding-top: 3px;
-width: 87px;
-}
-.Web_Series_watch_button:hover{
-    color: whitesmoke;
-    background-color:rgb(162, 129, 249);
-    border:none;
-    font-weight: 700;
-    
-}
-.Web_Series_share_button{
-    border: none;
-    outline: none;
-}
-.Web_Series_share_button:hover{
-    color:rgb(162, 129, 249) ;
-    font-weight: 700;
-}
-
-/* yaha tak */
-#footer_menu{
-    width: 98%;
-    height: 60px;
-    margin: auto;
-    background-color: blueviolet;
-    font-size: 50px;
-    color: whitesmoke;
-    margin-top: 100px;
-}
-
-
-
-
-
-
-
-/* <div class="Section_cards">
-                        <div class="Section_cards_image">
-                            <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                            <img src=""
-                                alt="" class="Section_cards_thumbnail">
-                        </div>
-                        <div class="Section_cards_bottom">
-                            <div class="section_cards_title_div">
-
-                                <p class="secton_cards_title"></p>
-                            </div>
-                            <div class="section_cards_buttons_div">
-                                <button class="section_cards_button_watch">▶ WATCH</button>
-                                <button class="section_cards_button_share">☍ SHARE</button>
-                            </div>
-
-                        </div>
-                    </div>
-                    rgb(64,26,76)
-                    
-                    */
-    </style>
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-
 <body>
-    <!-- navigation section starts here -->
-    <div id="navigation_bar_top">
-        
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">Zomato</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Explore</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Discover the Best Food & Restaurants</h1>
+    <p>Explore top-rated restaurants, cafes, and eateries near you.</p>
+    <button>Order Now</button>
+  </div>
+
+  <!-- Restaurant Listings -->
+  <section class="restaurant-section">
+    <h2>Popular Restaurants</h2>
+    <div class="restaurant-grid">
+      <div class="restaurant-card">
+        <img src="https://source.unsplash.com/300x200/?pizza" alt="Restaurant Image">
+        <div class="details">
+          <h3>Pizza Place</h3>
+          <p>Best pizza in town with authentic Italian flavors.</p>
+          <span class="rating">4.5 ★</span>
+        </div>
+      </div>
+      <div class="restaurant-card">
+        <img src="https://source.unsplash.com/300x200/?burger" alt="Restaurant Image">
+        <div class="details">
+          <h3>Burger Corner</h3>
+          <p>Juicy burgers with fresh ingredients and unique sauces.</p>
+          <span class="rating">4.7 ★</span>
+        </div>
+      </div>
+      <div class="restaurant-card">
+        <img src="https://source.unsplash.com/300x200/?dessert" alt="Restaurant Image">
+        <div class="details">
+          <h3>Sweet Treats</h3>
+          <p>Delicious desserts and baked goodies to satisfy your sweet tooth.</p>
+          <span class="rating">4.8 ★</span>
+        </div>
+      </div>
     </div>
-<!-- navigation section ends here -->
-
-<!-- ads section goes here-->
-<div id="ads_section">
-
-    <!-- <img src="https://tpc.googlesyndication.com/simgad/5044108350120313067?" alt="add">-->
-
-    <img src="https://cm1xbet.xyz/wp-content/uploads/2019/08/980x150_mini.gif" alt="">
-</div>
-    
-
-<!-- ads section goes here-->
-<!-- <div id="ads_section"> -->
-
-    <!-- <img src="https://tpc.googlesyndication.com/simgad/5044108350120313067?" alt="add">-->
-
-    <!-- <img src="https://cm1xbet.xyz/wp-content/uploads/2019/08/980x150_mini.gif" alt=""> -->
-<!-- </div>  -->
-
-
-<!-- ads section ends here-->
-
-<!-- slider -->
-    
-<div id="image_slider">
-    <div class="left_arrow"> ∟ </div>
-    <div class="append_image">
-
-    </div>
-    <div class="right_arrow"> ∟ </div>
-
-</div>
-<!-- slider ends -->
-
-    <!-- Content section starts from here -->
-
-    <div class="category_section">
-
-
-        <div id="ZEE5_Original_Web_Series" class="zee_category">
-
-            <div class="box_for_section_title">
-
-                <h2 class="section_title">
-                    ZEE5 Original Web Series
-                </h2>
-                <h2 class="section_more">
-                    More ⮞
-                </h2>
-            </div>
-
-            <div class="section_content" class="custom-slider" id="section_ZEE5_Original_Web_Series">
-
-            </div>
-
-<!--Top_10_on_ZEE5_Hindi******************************************************************  -->
-            <div id="Top_10_on_ZEE5_Hindi">
-                <div class="box_for_section_title">
-
-                    <h2 class="section_title">
-                        Top 10 on ZEE5 Hindi
-                    </h2>
-                    <h2 class="section_more">
-                        More ⮞
-                    </h2>
-                </div>
-
-                <div class="section_content">
-                    <div class="custom-slider">
-                        
-                        <div class="Section_cards">
-                            <div class="Section_cards_image">
-                                <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                               
-                                <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5146416/portrait/1920x77030295e51fe54452d8c85e76c5ec756e8.jpg"
-                                    alt="" class="Section_cards_thumbnail">
-                            </div>
-                            <div class="Section_cards_bottom">
-                                <div class="section_cards_title_div">
-    
-                                    <p class="secton_cards_title">Attack: part 1</p>
-                                </div>
-                                <div class="section_cards_buttons_div">
-                                    <button class="section_cards_button_watch">▶ WATCH</button>
-                                    <button class="section_cards_button_share">☍ SHARE</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Section_cards">
-                            <div class="Section_cards_image">
-                                <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                               
-                                <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5148935/portrait/1920x770ea4b4ed358824163a009717b04978419802bc3eabf62498685faf98fb8817e0a.jpg"
-                                    alt="" class="Section_cards_thumbnail">
-                            </div>
-                            
-                                <div class="Section_cards_bottom">
-                                    <div class="section_cards_title_div">
-        
-                                        <p class="secton_cards_title">Ardh</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-                                </div>
-                            
-                        </div>
-                        <div class="Section_cards">
-                            <div class="Section_cards_image">
-                                <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                                <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-101-10z5145273/portrait/rrrpfp27in192077009062022b486abfc7d83422dbaada4fef6c9ae59.jpg"
-                                    alt="" class="Section_cards_thumbnail">
-                            </div>
-                            <div class="Section_cards_bottom">
-                                <div class="section_cards_title_div">
-    
-                                    <p class="secton_cards_title">RRR</p>
-                                </div>
-                                <div class="section_cards_buttons_div">
-                                    <button class="section_cards_button_watch">▶ WATCH</button>
-                                    <button class="section_cards_button_share">☍ SHARE</button>
-                                </div>
-    
-                            </div>
-                        </div>
-                        <div class="Section_cards">
-                            <div class="Section_cards_image">
-                                <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                               
-                                <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5133458/portrait/1920x77060dd64aa6ef748f48bbdf4951a1f6af7b51352ca11794ad79904fded999459e7.jpg"  alt="" class="Section_cards_thumbnail">
-                            </div>
-                            
-                                <div class="Section_cards_bottom">
-                                    <div class="section_cards_title_div">
-        
-                                        <p class="secton_cards_title">The Kashmir Files</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-                                </div>
-                           
-                        </div>
-                        <div class="Section_cards">
-                            <div class="Section_cards_image">
-                                <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                               
-                                <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5161064/portrait/1920x770c61833d398744000af7c71e0c790ac04.jpg"
-                                    alt="" class="Section_cards_thumbnail">
-                            </div>
-                            <div class="Section_cards_bottom">
-                                <div class="section_cards_title_div">
-    
-                                    <p class="secton_cards_title">Dharmaveer</p>
-                                </div>
-                                <div class="section_cards_buttons_div">
-                                    <button class="section_cards_button_watch">▶ WATCH</button>
-                                    <button class="section_cards_button_share">☍ SHARE</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Section_cards">
-                            <div class="Section_cards_image">
-                                <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                               
-                                <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5156101/portrait/1920x7702f5c1d7a0eee45bdbdd6f473c9f51fe8.jpg"   alt="" class="Section_cards_thumbnail">
-                            </div>
-                            <div class="Section_cards_bottom">
-                                <div class="section_cards_title_div">
-    
-                                    <p class="secton_cards_title">Radhe Shyam</p>
-                                </div>
-                                <div class="section_cards_buttons_div">
-                                    <button class="section_cards_button_watch">▶ WATCH</button>
-                                    <button class="section_cards_button_share">☍ SHARE</button>
-                                </div>
-                            </div>
-                        </div>
-                      
-                        <div class="Section_cards">
-                            <div class="Section_cards_image">
-                                <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                               
-                                <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5149852/portrait/1920x77090e446a21944439d8536c06e25fd75ff.jpg"
-                                    alt="" class="Section_cards_thumbnail">
-                            </div>
-                            <div class="Section_cards_bottom">
-                                <div class="section_cards_title_div">
-    
-                                    <p class="secton_cards_title">Forensic</p>
-                                </div>
-                                <div class="section_cards_buttons_div">
-                                    <button class="section_cards_button_watch">▶ WATCH</button>
-                                    <button class="section_cards_button_share">☍ SHARE</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Section_cards">
-                            <div class="Section_cards_image">
-                                <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                               
-                                <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5133622/portrait/1920x7705ef1215cc2984b548b3356566bf54c3d.jpg"
-                                    alt="" class="Section_cards_thumbnail">
-                            </div>
-                            <div class="Section_cards_bottom">
-                                <div class="section_cards_title_div">
-    
-                                    <p class="secton_cards_title">Jhund</p>
-                                </div>
-                                <div class="section_cards_buttons_div">
-                                    <button class="section_cards_button_watch">▶ WATCH</button>
-                                    <button class="section_cards_button_share">☍ SHARE</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Section_cards">
-                            <div class="Section_cards_image">
-                                <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                               
-                                <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5145103/portrait/1920x770189f07ded33c4436b6d1796409308f04.jpg"
-                                    alt="" class="Section_cards_thumbnail">
-                            </div>
-                            <div class="Section_cards_bottom">
-                                <div class="section_cards_title_div">
-    
-                                    <p class="secton_cards_title">Zombivli</p>
-                                </div>
-                                <div class="section_cards_buttons_div">
-                                    <button class="section_cards_button_watch">▶ WATCH</button>
-                                    <button class="section_cards_button_share">☍ SHARE</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Section_cards">
-                            <div class="Section_cards_image">
-                                <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                               
-                                <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5117565/portrait/1920x7708e744fbdcb554e54a1036108a0832ebf.jpg" </div>
-                            <div class="Section_cards_bottom">
-                                <div class="section_cards_title_div">
-    
-                                    <p class="secton_cards_title">Valimai</p>
-                                </div>
-                                <div class="section_cards_buttons_div">
-                                    <button class="section_cards_button_watch">▶ WATCH</button>
-                                    <button class="section_cards_button_share">☍ SHARE</button>
-                                </div>
-                            </div>
-                        </div>
-                       
-                    </div>
-
-                </div>
-            </div>
-
-<!-- Latest Movies on ZEE5***********************************************************************  -->
-            <div id="Latest_Movies_on_ZEE5">
-
-                <div class="box_for_section_title">
-
-                    <h2 class="section_title">
-                        Latest Movies on ZEE5
-                    </h2>
-                    <h2 class="section_more">
-                        More ⮞
-                    </h2>
-                </div>
-                <div class="section_content">
-                    <div class="custom-slider">
-                        <div class="Section_cards">
-                            <div class="Section_cards_image">
-                                <img class="Section_cards_crown"
-                                    src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="">
-                                <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-101-10z5145273/portrait/rrrpfp27in192077009062022b486abfc7d83422dbaada4fef6c9ae59.jpg"
-                                    alt="" class="Section_cards_thumbnail">
-                            </div>
-                            <div class="Section_cards_bottom">
-                                <div class="section_cards_title_div">
-
-                                    <p class="secton_cards_title">RRR</p>
-                                </div>
-                                <div class="section_cards_buttons_div">
-                                    <button class="section_cards_button_watch">▶ WATCH</button>
-                                    <button class="section_cards_button_share">☍ SHARE</button>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="Section_cards">
-                            <div class="Section_cards_image">
-                                <img class="Section_cards_crown"
-                                    src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="">
-
-                               <a href="description.html"> <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5146416/portrait/1920x77030295e51fe54452d8c85e76c5ec756e8.jpg"
-                                alt="" class="Section_cards_thumbnail"></a>
-                            </div>
-                            <div class="Section_cards_bottom">
-                                <div class="section_cards_title_div">
-
-                                    <p class="secton_cards_title">Attack: part 1</p>
-                                </div>
-                                <div class="section_cards_buttons_div">
-                                    <a href="description.html"><button class="section_cards_button_watch">▶ WATCH</button></a>
-                                    <button class="section_cards_button_share">☍ SHARE</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Section_cards">
-                            <div class="Section_cards_image">
-                                <img class="Section_cards_crown"
-                                    src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="">
-
-                                <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5148935/portrait/1920x770ea4b4ed358824163a009717b04978419802bc3eabf62498685faf98fb8817e0a.jpg"
-                                    alt="" class="Section_cards_thumbnail">
-                            </div>
-
-                            <div class="Section_cards_bottom">
-                                <div class="section_cards_title_div">
-
-                                    <p class="secton_cards_title">Ardh</p>
-                                </div>
-                                <div class="section_cards_buttons_div">
-                                    <button class="section_cards_button_watch">▶ WATCH</button>
-                                    <button class="section_cards_button_share">☍ SHARE</button>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="Section_cards">
-                            <div class="Section_cards_image">
-                                <img class="Section_cards_crown"
-                                    src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="">
-
-                                <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5133458/portrait/1920x77060dd64aa6ef748f48bbdf4951a1f6af7b51352ca11794ad79904fded999459e7.jpg"
-                                    alt="" class="Section_cards_thumbnail">
-                            </div>
-
-                            <div class="Section_cards_bottom">
-                                <div class="section_cards_title_div">
-
-                                    <p class="secton_cards_title">The Kashmir Files</p>
-                                </div>
-                                <div class="section_cards_buttons_div">
-                                    <button class="section_cards_button_watch">▶ WATCH</button>
-                                    <button class="section_cards_button_share">☍ SHARE</button>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="Section_cards">
-                            <div class="Section_cards_image">
-                                <img class="Section_cards_crown"
-                                    src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="">
-
-                                <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5156101/portrait/1920x7702f5c1d7a0eee45bdbdd6f473c9f51fe8.jpg"
-                                    alt="" class="Section_cards_thumbnail">
-                            </div>
-                            <div class="Section_cards_bottom">
-                                <div class="section_cards_title_div">
-
-                                    <p class="secton_cards_title">Radhe Shyam</p>
-                                </div>
-                                <div class="section_cards_buttons_div">
-                                    <button class="section_cards_button_watch">▶ WATCH</button>
-                                    <button class="section_cards_button_share">☍ SHARE</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Section_cards">
-                            <div class="Section_cards_image">
-                                <img class="Section_cards_crown"
-                                    src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="">
-
-                                <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5161064/portrait/1920x770c61833d398744000af7c71e0c790ac04.jpg"
-                                    alt="" class="Section_cards_thumbnail">
-                            </div>
-                            <div class="Section_cards_bottom">
-                                <div class="section_cards_title_div">
-
-                                    <p class="secton_cards_title">Dharmaveer</p>
-                                </div>
-                                <div class="section_cards_buttons_div">
-                                    <button class="section_cards_button_watch">▶ WATCH</button>
-                                    <button class="section_cards_button_share">☍ SHARE</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Section_cards">
-                            <div class="Section_cards_image">
-                                <img class="Section_cards_crown"
-                                    src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="">
-
-                                <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5149852/portrait/1920x77090e446a21944439d8536c06e25fd75ff.jpg"
-                                    alt="" class="Section_cards_thumbnail">
-                            </div>
-                            <div class="Section_cards_bottom">
-                                <div class="section_cards_title_div">
-
-                                    <p class="secton_cards_title">Forensic</p>
-                                </div>
-                                <div class="section_cards_buttons_div">
-                                    <button class="section_cards_button_watch">▶ WATCH</button>
-                                    <button class="section_cards_button_share">☍ SHARE</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Section_cards">
-                            <div class="Section_cards_image">
-                                <img class="Section_cards_crown"
-                                    src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="">
-
-                                <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5133622/portrait/1920x7705ef1215cc2984b548b3356566bf54c3d.jpg"
-                                    alt="" class="Section_cards_thumbnail">
-                            </div>
-                            <div class="Section_cards_bottom">
-                                <div class="section_cards_title_div">
-
-                                    <p class="secton_cards_title">Jhund</p>
-                                </div>
-                                <div class="section_cards_buttons_div">
-                                    <button class="section_cards_button_watch">▶ WATCH</button>
-                                    <button class="section_cards_button_share">☍ SHARE</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Section_cards">
-                            <div class="Section_cards_image">
-                                <img class="Section_cards_crown"
-                                    src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="">
-
-                                <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5145103/portrait/1920x770189f07ded33c4436b6d1796409308f04.jpg"
-                                    alt="" class="Section_cards_thumbnail">
-                            </div>
-                            <div class="Section_cards_bottom">
-                                <div class="section_cards_title_div">
-
-                                    <p class="secton_cards_title">Zombivli</p>
-                                </div>
-                                <div class="section_cards_buttons_div">
-                                    <button class="section_cards_button_watch">▶ WATCH</button>
-                                    <button class="section_cards_button_share">☍ SHARE</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Section_cards">
-                            <div class="Section_cards_image">
-                                <img class="Section_cards_crown"
-                                    src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="">
-
-                                <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5117565/portrait/1920x7708e744fbdcb554e54a1036108a0832ebf.jpg" alt="">
-                                    </div>
-                                <div class="Section_cards_bottom">
-                                    <div class="section_cards_title_div">
-
-                                        <p class="secton_cards_title">Valimai</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
-<!-- hindi dubbed movies*********************************************************** -->
-                <div id="Hindi_Dubbed_Movies">
-
-                    <div class="box_for_section_title">
-
-                        <h2 class="section_title">
-                            Hindi Dubbed Movies
-                        </h2>
-                        <h2 class="section_more">
-                            More ⮞
-                        </h2>
-                    </div>
-                    <div class="section_content">
-                        <div class="custom-slider">
-
-                            <div class="Section_cards">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5156101/portrait/1920x7702f5c1d7a0eee45bdbdd6f473c9f51fe8.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom">
-                                    <div class="section_cards_title_div">
-        
-                                        <p class="secton_cards_title">Radhe Shyam</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-        
-                                </div>
-                            </div>
-                            <div class="Section_cards">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-movie_466418637/portrait/1920x770bd16a42c2fd7485db6672b48cb8b435e.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom">
-                                    <div class="section_cards_title_div">
-        
-                                        <p class="secton_cards_title">Robot</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-        
-                                </div>
-                            </div>
-
-                            <div class="Section_cards">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-348372/portrait/1920x77041f91aea29de44daa6ab065a1f6a6c53.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom">
-                                    <div class="section_cards_title_div">
-        
-                                        <p class="secton_cards_title">Aravinda Sametha</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-        
-                                </div>
-                            </div>
-                            <div class="Section_cards">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                                   <a href="/description_valimai.html"> <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5117565/portrait/1920x7708e744fbdcb554e54a1036108a0832ebf.jpg"
-                                    alt="" class="Section_cards_thumbnail"></a>
-                                </div>
-                                <div class="Section_cards_bottom">
-                                    <div class="section_cards_title_div">
-        
-                                        <p class="secton_cards_title">Valimai</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <a href="/description_valimai.html"><button class="section_cards_button_watch">▶ WATCH</button></a>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-        
-                                </div>
-                            </div>
-                            <div class="Section_cards">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-movie_1803765767/portrait/TimeStory1920x7702e3b15ada92d419d95ef0d15a7919a63.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom">
-                                    <div class="section_cards_title_div">
-        
-                                        <p class="secton_cards_title">Time Story</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-        
-                                </div>
-                            </div>
-                            <div class="Section_cards">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-149834/portrait/1920x7702018404691.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom">
-                                    <div class="section_cards_title_div">
-        
-                                        <p class="secton_cards_title">Dhruva</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-        
-                                </div>
-                            </div>
-                            <div class="Section_cards">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-369273/portrait/1920x7707c47b251e254462c80266717d90ba9be.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom">
-                                    <div class="section_cards_title_div">
-        
-                                        <p class="secton_cards_title">Silence... Can You Hear It?</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-        
-                                </div>
-                            </div>
-                            <div class="Section_cards">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5133688/portrait/1920x770a9d8bee23b2a416e84d820532a70ece9.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom">
-                                    <div class="section_cards_title_div">
-        
-                                        <p class="secton_cards_title">Rakshashi</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-        
-                                </div>
-                            </div>
-                            <div class="Section_cards">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5127658/portrait/1920x7705069b6f0976a43ada79dde78f78400a1.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom">
-                                    <div class="section_cards_title_div">
-        
-                                        <p class="secton_cards_title">Main Viyah Nahi Karona Tere Naal</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-        
-                                </div>
-                            </div>
-                            <div class="Section_cards">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z513117/portrait/1920x770478c174d17894ab79a63d72e6b02a830d72d7d1a03fc4037a8b321b5519c5a8e.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom">
-                                    <div class="section_cards_title_div">
-        
-                                        <p class="secton_cards_title">Rashmi Rocket</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-        
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-
-             
-<!-- Latest_Hindi_Episodes_Free******************************************* -->
-                <div id="Latest_Hindi_Episodes_Free">
-                    <div class="box_for_section_title">
-
-                        <h2 class="section_title">
-                            Latest Hindi Episodes Free
-                        </h2>
-                        <h2 class="section_more">
-                            More ⮞
-                        </h2>
-                    </div>
-                    <div class="section_content">
-                        <div class="custom-slider">
-                            <div class="Section_cards_tv_episodes">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown"
-                                        src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="">
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5162225/list/00000249c8425c2d2f774945be7c5f90ff34333e.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom_tv_episodes">
-                                    <div class="section_cards_title_div">
-
-                                        <p class="secton_cards_title">Bhagya Lakshmi</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="Section_cards_tv_episodes">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown"
-                                        src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="">
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5162240/list/00000144a4baee62550d418499e97a8879298d33.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom_tv_episodes">
-                                    <div class="section_cards_title_div">
-
-                                        <p class="secton_cards_title">Kundali Bhagya</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="Section_cards_tv_episodes">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown"
-                                        src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="">
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5162349/list/00000191288fdc5ebf3b40828d38caff4f63c09a.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom_tv_episodes">
-                                    <div class="section_cards_title_div">
-
-                                        <p class="secton_cards_title">Meet</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="Section_cards_tv_episodes">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown"
-                                        src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="">
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5162235/list/00000181ce953deeb7104b5fa98268d7263e3a4f.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom_tv_episodes">
-                                    <div class="section_cards_title_div">
-
-                                        <p class="secton_cards_title">Kumkum Bhagya</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="Section_cards_tv_episodes">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown"
-                                        src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="">
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5162419/list/00000256726e1eb3cc7d43539907c8d39c5e27c3.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom_tv_episodes">
-                                    <div class="section_cards_title_div">
-
-                                        <p class="secton_cards_title">Pyar Ka Pahla Naam: Radha Mohan</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="Section_cards_tv_episodes">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown"
-                                        src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="">
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5162383/list/000002223751f461f6a64be7b1f358f07b777914.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom_tv_episodes">
-                                    <div class="section_cards_title_div">
-
-                                        <p class="secton_cards_title">Mithai</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="Section_cards_tv_episodes">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown"
-                                        src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="">
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5162324/list/00000162b7a3d46f2491462697e70b6e49ddd285.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom_tv_episodes">
-                                    <div class="section_cards_title_div">
-
-                                        <p class="secton_cards_title">Tere Bina Jiya Jaye Na</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="Section_cards_tv_episodes">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown"
-                                        src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="">
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5162006/list/00000106eb7b69e65ebf4041861a80e3269ae659.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom_tv_episodes">
-                                    <div class="section_cards_title_div">
-
-                                        <p class="secton_cards_title">Ek Mahanayak: Dr B R Ambedkar</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="Section_cards_tv_episodes">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown"
-                                        src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="">
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5162078/list/00000231aaa51c90852e4a8c8578e4019c7e8fbc.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom_tv_episodes">
-                                    <div class="section_cards_title_div">
-
-                                        <p class="secton_cards_title">Bhabhi Ji Ghar Par Hai!</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="Section_cards_tv_episodes">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown"
-                                        src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="">
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5162107/list/0000014443376dd3cafd4748b22f96614adce56d.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom_tv_episodes">
-                                    <div class="section_cards_title_div">
-
-                                        <p class="secton_cards_title">Bal Shiv</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="Section_cards_tv_episodes">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown"
-                                        src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="">
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5162057/list/00000175cf726c27917b4f46b3181afa554c90b4.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom_tv_episodes">
-                                    <div class="section_cards_title_div">
-
-                                        <p class="secton_cards_title">Happu Ki Ultan Paltan</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            
-              
-<!-- *************************IMDB Top Picks********************** -->
-                <div id="IMDB_Top_Picks">
-
-                    <div class="box_for_section_title">
-
-                        <h2 class="section_title">
-                            IMDB Top Picks
-                        </h2>
-                        <h2 class="section_more">
-                            More ⮞
-                        </h2>
-                    </div>
-
-                    <div class="section_content">
-                        <div class="custom-slider">
-
-                            <div class="Section_cards">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z544916/portrait/1920x770141dcb00909443ec8d04dbc10d8e7f6c944beb98e417497b944a409681c374c0.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom">
-                                    <div class="section_cards_title_div">
-        
-                                        <p class="secton_cards_title">Bob Biswas</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-        
-                                </div>
-                            </div>
-                            <div class="Section_cards">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-33204/portrait/1920x770ab13e3472dce436a9e87bcd9b77bfad4.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom">
-                                    <div class="section_cards_title_div">
-        
-                                        <p class="secton_cards_title">Uri: The Surgical Strick</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-        
-                                </div>
-                            </div>
-                            <div class="Section_cards">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-399328/portrait/1920x770a44ed4e50d1a4bbda6263e0e3827d500566de68e2bba45f787a4ceab521a3a7f.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom">
-                                    <div class="section_cards_title_div">
-        
-                                        <p class="secton_cards_title">Radhe:Your Most Wanted Bhai</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-        
-                                </div>
-                            </div>
-                            <div class="Section_cards">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z562203/portrait/1920x7706847e0d919d448328eeb2f88b259d73a0fd8743b1e984c9782e72e68355cf49e.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom">
-                                    <div class="section_cards_title_div">
-        
-                                        <p class="secton_cards_title">Antim:The Final Truth"</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-        
-                                </div>
-                            </div>
-                            <div class="Section_cards">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z51560/portrait/1920x770087ff5f6d15f44f98b6a27adc7130aac.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom">
-                                    <div class="section_cards_title_div">
-        
-                                        <p class="secton_cards_title">Helmet</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-        
-                                </div>
-                            </div>
-                            <div class="Section_cards">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5127658/portrait/1920x7705069b6f0976a43ada79dde78f78400a1.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom">
-                                    <div class="section_cards_title_div">
-        
-                                        <p class="secton_cards_title">Main Viyah Nahi Karona Tere Naal</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-        
-                                </div>
-                            </div>
-                            <div class="Section_cards">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5149852/portrait/1920x77090e446a21944439d8536c06e25fd75ff.jpg""
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom">
-                                    <div class="section_cards_title_div">
-        
-                                        <p class="secton_cards_title">Forensic</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-        
-                                </div>
-                            </div>
-                            <div class="Section_cards">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5133458/portrait/1920x77060dd64aa6ef748f48bbdf4951a1f6af7b51352ca11794ad79904fded999459e7.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom">
-                                    <div class="section_cards_title_div">
-        
-                                        <p class="secton_cards_title">The Kashmir Files</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-        
-                                </div>
-                            </div>
-                            <div class="Section_cards">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-369273/portrait/1920x7707c47b251e254462c80266717d90ba9be.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom">
-                                    <div class="section_cards_title_div">
-        
-                                        <p class="secton_cards_title">Silence...Can You Hear It?</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-        
-                                </div>
-                            </div>
-                            <div class="Section_cards">
-                                <div class="Section_cards_image">
-                                    <img class="Section_cards_crown" src="https://www.zee5.com/images/premium-ic.svg?ver=2.51.65" alt="" >
-                                    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5133622/portrait/1920x7705ef1215cc2984b548b3356566bf54c3d.jpg"
-                                        alt="" class="Section_cards_thumbnail">
-                                </div>
-                                <div class="Section_cards_bottom">
-                                    <div class="section_cards_title_div">
-        
-                                        <p class="secton_cards_title">Jhund","</p>
-                                    </div>
-                                    <div class="section_cards_buttons_div">
-                                        <button class="section_cards_button_watch">▶ WATCH</button>
-                                        <button class="section_cards_button_share">☍ SHARE</button>
-                                    </div>
-        
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Content section ends from here -->
-
-            <script type="text/javascript"
-                src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-            <script type="text/javascript"
-                src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-                <div id="footer"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Zomato Clone. All Rights Reserved.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </footer>
 </body>
-
 </html>
-<script src="index.js">
 
-</script>
-<script type="text/javascript">
-    $('.custom-slider').slick({
-        centerMode: false,
-        dots: false,
-        //   autoplay: true,
-        //   autoplaySpeed: 1000,
-        centerPadding: '60px',
-
-        infinite: true,
-        slidesToShow: 6,
-        slidesToScroll: 6,
-
-    })
-
-
-</script>
-<script src="zee5Original.js">
-</script>
-<script type="module">
-    import {navbar} from "./components/navbar.js";
-    const nav = document.querySelector('#navigation_bar_top');
-    nav.innerHTML=navbar();
-
-    import {footer} from"./components/footer.js";
-    const foot = document.querySelector('#footer');
-    foot.innerHTML=footer();
-</script>
